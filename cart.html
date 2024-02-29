@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Details | E-Commerce Project</title>
+
+    <!---CSS Link--->
+    <link rel="stylesheet" href="redstore.css">
+
+    <!---Font Awesome--->
+    <script src="https://kit.fontawesome.com/b818ade590.js" crossorigin="anonymous"></script>
+
+    <!---Goggle Style Font--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- <div class="header"> -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="RedStore_Img/images/logo.png" width="125px"></a>
+            </div>
+
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="./RedStore_Img/images/cart.png" width="30px" height="30px"></a>
+            <img src="./RedStore_Img/images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+<!-- </div> -->
+
+    <!--------------- Cart Item Details----------------->
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+        </tr>
+
+        <!------ 1st Item ------>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="./RedStore_Img/images/buy-1.jpg">
+                    <div>
+                        <p>Red Printed T-Shirt</p>
+                        <small>Price: $50.00</small>
+                        <br>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50.00</td>
+        </tr>
+
+        <!------ 2nd Item ------>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="./RedStore_Img/images/buy-2.jpg">
+                    <div>
+                        <p>Skechers Black & White</p>
+                        <small>Price: $69.00</small>
+                        <br>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$69.00</td>
+        </tr>
+
+        <!------ 3rd Item ------>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="./RedStore_Img/images/buy-3.jpg">
+                    <div>
+                        <p>Nike Training Pants</p>
+                        <small>Price: $25.00</small>
+                        <br>
+                        <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$25.00</td>
+        </tr>
+    </table>
+
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Sub Total</td>
+                <td>$144.00</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>$2.00</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$146.00</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+    <!--------------- Bottom Footer----------------->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App For Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="./RedStore_Img/images/play-store.png">
+                        <img src="./RedStore_Img/images/app-store.png">
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="./RedStore_Img/images/logo-white.png">
+                    <p>Our Purpose Is To Sustuinably Make the Plesure and
+                        Benefits of Sports Accessible to the Many.
+                    </p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3><br>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3><br>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2020 - Luthfi Enggar Juang</p>
+        </div>
+    </div>
+
+    <!--------------- JavaScript For Toggle Menu----------------->
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    
+<!--------------- JavaScript For Every Image ----------------->
+    <!-- <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function(){
+            ProductImg.src = SmallImg[0].src
+        }
+        SmallImg[1].onclick = function(){
+            ProductImg.src = SmallImg[1].src
+        }
+        SmallImg[2].onclick = function(){
+            ProductImg.src = SmallImg[2].src
+        }
+        SmallImg[3].onclick = function(){
+            ProductImg.src = SmallImg[3].src
+        }
+    </script> -->
+
+
+</body>
+
+</html>
